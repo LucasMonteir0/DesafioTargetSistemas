@@ -1,4 +1,7 @@
 ﻿using System.Globalization;
+using DesafioTargetSistemas.Desafio1Comissao;
+using DesafioTargetSistemas.Desafio2Estoque;
+using DesafioTargetSistemas.Desafio3Juros;
 
 public class Program
 {
@@ -35,7 +38,7 @@ public class Program
                     Desafio2Estoque.Executar();
                     break;
                 case "3":
-            
+                    Desafio3Juros.Executar();
                     break;
                 case "0":
                     sair = true;

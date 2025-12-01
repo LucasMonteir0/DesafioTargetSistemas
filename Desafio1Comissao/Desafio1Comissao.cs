@@ -3,6 +3,9 @@ using System.Globalization;
 using System.Text.Json.Serialization;
 using DesafioTargetSistemas.commons;
 
+
+namespace DesafioTargetSistemas.Desafio1Comissao;
+
 public class Desafio1Comissao
 {
     private class Venda

@@ -1,8 +1,8 @@
-using System.Text.Json;
-using System.Text.Json.Serialization;
 using DesafioTargetSistemas.commons;
 using DesafioTargetSistemas.Desafio2Estoque.enums;
 using DesafioTargetSistemas.Desafio2Estoque.models;
+
+namespace DesafioTargetSistemas.Desafio2Estoque;
 
 public class Desafio2Estoque
 {
@@ -90,7 +90,7 @@ public class Desafio2Estoque
             novoEstoque += quantidade;
         }
         {
-            if (produto.Estoque < quantidade)
+            if (produto.Estoque < quantidade && tipoMovimentacao == TipoMovimentacao.Saida)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Atenção: Estoque insuficiente ({produto.Estoque}). Movimentação cancelada.");
