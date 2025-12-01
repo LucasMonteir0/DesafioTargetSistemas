@@ -89,8 +89,9 @@ public class Desafio2Estoque
         {
             novoEstoque += quantidade;
         }
+        else
         {
-            if (produto.Estoque < quantidade && tipoMovimentacao == TipoMovimentacao.Saida)
+            if (produto.Estoque < quantidade)
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine($"Atenção: Estoque insuficiente ({produto.Estoque}). Movimentação cancelada.");
@@ -107,7 +108,7 @@ public class Desafio2Estoque
             produto.CodigoProduto,
             produto.DescricaoProduto,
             descricao,
-            tipoMovimentacao, 
+            tipoMovimentacao,
             quantidade,
             produto.Estoque
         );
@@ -129,6 +130,38 @@ public class Desafio2Estoque
         Console.WriteLine(new string('-', 50));
     }
 
+    private static void ExibirHistorico()
+    {
+        Console.WriteLine("\n--- Histórico de Movimentações ---");
+        if (_historicoMovimentacoes.Count == 0)
+        {
+            Console.WriteLine("Nenhuma movimentação registrada ainda.");
+            return;
+        }
+
+        Console.ResetColor();
+        Console.WriteLine($"{"ID",-5} {"Produto",-25} {"Tipo",-8} {"Qtde",-6} {"Estoque Final",-15} {"Data/Hora"}");
+        Console.WriteLine(new string('-', 75));
+
+        foreach (var m in _historicoMovimentacoes)
+        {
+            if (m.Tipo == TipoMovimentacao.Entrada)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+            }
+
+            Console.WriteLine(
+                $"{m.Id,-5} {m.DescricaoProduto,-25} {m.Tipo.ToString().ToUpper(),-8} {m.Quantidade,-6} {m.EstoqueFinal,-15} {m.DataMovimentacao.ToString("dd/MM/yyyy HH:mm")}");
+
+            Console.ResetColor();
+        }
+        Console.WriteLine(new string('-', 75));
+    }
+
     public static void Executar()
     {
         Console.ForegroundColor = ConsoleColor.Yellow;
@@ -143,6 +176,7 @@ public class Desafio2Estoque
             Console.WriteLine("\nMenu de Estoque:");
             Console.WriteLine("1. Realizar Movimentação (Entrada/Saída)");
             Console.WriteLine("2. Exibir Estoque Atual");
+            Console.WriteLine("3. Exibir Histórico de Movimentações");
             Console.WriteLine("0. Voltar ao Menu Principal");
             Console.Write("\nDigite a opção: ");
 
@@ -155,6 +189,9 @@ public class Desafio2Estoque
                     break;
                 case "2":
                     ExibirEstoqueAtual();
+                    break;
+                case "3":
+                    ExibirHistorico();
                     break;
                 case "0":
                     voltar = true;
