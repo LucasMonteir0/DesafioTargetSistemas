@@ -1,0 +1,14 @@
+E:\repos\DesafioTargetSistemas\bin\Debug\net10.0\DesafioTargetSistemas.exe
+E:\repos\DesafioTargetSistemas\bin\Debug\net10.0\DesafioTargetSistemas.deps.json
+E:\repos\DesafioTargetSistemas\bin\Debug\net10.0\DesafioTargetSistemas.runtimeconfig.json
+E:\repos\DesafioTargetSistemas\bin\Debug\net10.0\DesafioTargetSistemas.dll
+E:\repos\DesafioTargetSistemas\bin\Debug\net10.0\DesafioTargetSistemas.pdb
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.GeneratedMSBuildEditorConfig.editorconfig
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.AssemblyInfoInputs.cache
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.AssemblyInfo.cs
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.csproj.CoreCompileInputs.cache
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.dll
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\refint\DesafioTargetSistemas.dll
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.pdb
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.genruntimeconfig.cache
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\ref\DesafioTargetSistemas.dll
