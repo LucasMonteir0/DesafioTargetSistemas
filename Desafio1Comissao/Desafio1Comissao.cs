@@ -2,26 +2,13 @@ using System.Text.Json;
 using System.Globalization;
 using System.Text.Json.Serialization;
 using DesafioTargetSistemas.commons;
+using DesafioTargetSistemas.Desafio1Comissao.models;
 
 
 namespace DesafioTargetSistemas.Desafio1Comissao;
 
 public class Desafio1Comissao
 {
-    private class Venda
-    {
-        [JsonPropertyName("vendedor")]
-        public string? Vendedor { get; set; }
-
-        [JsonPropertyName("valor")]
-        public decimal Valor { get; set; }
-    }
-
-    private class DadosVendas
-    {
-        [JsonPropertyName("vendas")]
-        public List<Venda>? Vendas { get; set; }
-    }
 
     private static decimal CalcularComissaoPorVenda(decimal valorVenda)
     {
@@ -67,13 +54,9 @@ public class Desafio1Comissao
 
                 decimal comissao = CalcularComissaoPorVenda(venda.Valor);
 
-                if (comissaoTotalPorVendedor.ContainsKey(venda.Vendedor))
+                if (!comissaoTotalPorVendedor.TryAdd(venda.Vendedor, comissao))
                 {
                     comissaoTotalPorVendedor[venda.Vendedor] += comissao;
-                }
-                else
-                {
-                    comissaoTotalPorVendedor.Add(venda.Vendedor, comissao);
                 }
             }
 

@@ -89,7 +89,7 @@ A taxa diária é de **2,5% (0,025)** ao dia.
 ### 📘 Fórmula Utilizada
 
 \[
-M = C \cdot (1 + r)^n
+M = C x (1 + r)^n
 \]
 
 Onde:  
@@ -99,5 +99,3 @@ Onde:
 - **n** = Número de dias em atraso  
 
 ---
-
-Se quiser, posso ajudar você a estilizar também **badges**, **seções adicionais**, **prints**, **instruções de execução**, ou criar uma **versão em inglês**.
