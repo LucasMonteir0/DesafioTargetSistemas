@@ -1,4 +1,3 @@
-using System; // Adicionei 'using System' para DateTime
 using DesafioTargetSistemas.Desafio2Estoque.enums;
 
 namespace DesafioTargetSistemas.Desafio2Estoque.models
