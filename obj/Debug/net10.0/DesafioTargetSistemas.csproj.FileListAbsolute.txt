@@ -12,3 +12,4 @@ E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\refint\DesafioTargetSistemas.dl
 E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.pdb
 E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.genruntimeconfig.cache
 E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\ref\DesafioTargetSistemas.dll
+E:\repos\DesafioTargetSistemas\obj\Debug\net10.0\DesafioTargetSistemas.sourcelink.json

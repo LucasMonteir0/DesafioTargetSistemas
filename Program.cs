@@ -32,7 +32,7 @@ public class Program
                     Desafio1Comissao.Executar();
                     break;
                 case "2":
-                    
+                    Desafio2Estoque.Executar();
                     break;
                 case "3":
             

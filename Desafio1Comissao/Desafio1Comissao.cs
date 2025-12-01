@@ -1,6 +1,7 @@
 using System.Text.Json;
 using System.Globalization;
 using System.Text.Json.Serialization;
+using DesafioTargetSistemas.commons;
 
 public class Desafio1Comissao
 {
@@ -41,33 +42,11 @@ public class Desafio1Comissao
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("--- Desafio 1: Cálculo de Comissões de Vendas ---");
         Console.ResetColor();
-        string jsonContent;
-        const string filePath = "Desafio1Comissao/dados.json";
-
+        const string filePath = "Desafio1Comissao/dados.json";        
+ 
         try
         {
-            Console.WriteLine("Lendo dados, aguarde um momento");
-            jsonContent = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), filePath));
-        }
-        catch (FileNotFoundException)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"ERRO: Arquivo '{filePath}' não encontrado.");
-            Console.WriteLine("Por favor, crie o arquivo dados.json na pasta de execução do programa com o conteúdo JSON fornecido.");
-            Console.ResetColor();
-            return;
-        }
-        catch (Exception ex)
-        {
-            Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine($"Ocorreu um erro ao ler o arquivo '{filePath}': {ex.Message}");
-            Console.ResetColor();
-            return;
-        }
-
-        try
-        {
-            var dados = JsonSerializer.Deserialize<DadosVendas>(jsonContent);
+            var dados = FileHelper.ConverterParaJson<DadosVendas>(filePath);
 
             if (dados?.Vendas == null || dados.Vendas.Count == 0)
             {
